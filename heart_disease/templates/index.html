@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Disease Predictor</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>❤️ Heart Disease Predictor</h1>
+    <form method="post" action="/predict" class="prediction-form">
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        
+        <div class="form-group">
+          <label for="age">Age (years)</label>
+          <input type="number" id="age" name="age" min="1" max="120" required />
+          <div class="error-message" id="age-error"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="sex">Sex</label>
+          <select id="sex" name="sex">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+          </select>
+        </div>
+      </fieldset>
+      
+      <!-- Medical Measurements -->
+      <fieldset>
+        <legend>Medical Measurements</legend>
+        
+        <div class="form-group">
+          <label for="bp">Resting Blood Pressure (mm Hg)</label>
+          <input type="number" id="bp" name="bp" min="80" max="250" required />
+          <div class="error-message" id="bp-error"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="cholesterol">Cholesterol (mg/dL)</label>
+          <input type="number" id="cholesterol" name="cholesterol" min="100" max="600" required />
+          <div class="error-message" id="cholesterol-error"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="hr">Maximum Heart Rate</label>
+          <input type="number" id="hr" name="hr" min="60" max="220" required />
+          <div class="error-message" id="hr-error"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="oldpeak">ST Depression (oldpeak)</label>
+          <input type="number" id="oldpeak" name="oldpeak" min="0" max="10" step="0.1" required />
+          <div class="error-message" id="oldpeak-error"></div>
+        </div>
+      </fieldset>
+      
+      <!-- Medical Conditions -->
+      <fieldset>
+        <legend>Medical Conditions</legend>
+        
+        <div class="form-group">
+          <label for="chest_pain">Chest Pain Type</label>
+          <select id="chest_pain" name="chest_pain">
+            <option value="1">1 – Typical Angina</option>
+            <option value="2">2 – Atypical Angina</option>
+            <option value="3">3 – Non-anginal Pain</option>
+            <option value="4">4 – Asymptomatic</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="sugar">Fasting Blood Sugar >120 mg/dL?</label>
+          <select id="sugar" name="sugar">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="ecg">Resting ECG Results</label>
+          <select id="ecg" name="ecg">
+            <option value="0">0 – Normal</option>
+            <option value="1">1 – ST-T Abnormality</option>
+            <option value="2">2 – LVH</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="angina">Exercise-Induced Angina</label>
+          <select id="angina" name="angina">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="slope">ST Slope</label>
+          <select id="slope" name="slope">
+            <option value="1">1 – Upward</option>
+            <option value="2">2 – Flat</option>
+            <option value="3">3 – Downward</option>
+          </select>
+        </div>
+      </fieldset>
+      
+      <div class="form-actions">
+        <button type="submit">Predict Heart Disease Risk</button>
+      </div>
+    </form>
+
+    {% if result %}
+      <div class="result">
+        <h2>{{ result }}</h2>
+        <p>Probability: {{ probability }}</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>

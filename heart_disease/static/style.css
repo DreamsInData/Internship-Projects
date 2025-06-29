@@ -1,0 +1,160 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #fff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    color: #263238;
+  }
+  
+  .container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #006064;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .prediction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  fieldset {
+    border: 1px solid #b0bec5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  legend {
+    font-weight: 600;
+    color: #00838f;
+    padding: 0 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #37474f;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #00838f;
+    box-shadow: 0 0 0 3px rgba(0, 131, 143, 0.2);
+    outline: none;
+  }
+  
+  .error-message {
+    color: #d32f2f;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+  }
+  
+  input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #d32f2f;
+  }
+  
+  input:invalid:not(:focus):not(:placeholder-shown) + .error-message {
+    display: block;
+  }
+  
+  .form-actions {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 14px 25px;
+    background: #00838f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 100%;
+  }
+  
+  button:hover {
+    background: #006064;
+    transform: translateY(-2px);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  .result {
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e0f2f1;
+    border: 1px solid #b2dfdb;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .result h2 {
+    color: #00695c;
+    margin-top: 0;
+  }
+  
+  .result p {
+    color: #004d40;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+      margin: 10px;
+    }
+    
+    fieldset {
+      padding: 15px;
+    }
+    
+    button {
+      padding: 12px;
+    }
+  }
+  
