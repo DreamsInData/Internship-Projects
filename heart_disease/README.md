@@ -9,8 +9,6 @@ This project is a **web-based machine learning application** that predicts the l
 - A **binary prediction** (Heart Disease / No Heart Disease)
 - A **probability score**
 
-![System Architecture](system_architecture.png)  
-*Diagram showing the workflow*
 
 ---
 
@@ -162,12 +160,12 @@ See the [LICENSE](LICENSE) file for full terms.
 - --------------------------
                   precision    recall  f1-score   support
 
-       Normal       0.71      1.00      0.83        10
-Heart Disease       1.00      0.80      0.89        20
+       -Normal       0.71      1.00      0.83        10
+-Heart Disease       1.00      0.80      0.89        20
 
-     accuracy                           0.87        30
-    macro avg       0.86      0.90      0.86        30
- weighted avg       0.90      0.87      0.87        30
+     -accuracy                           0.87        30
+   - macro avg       0.86      0.90      0.86        30
+ -weighted avg       0.90      0.87      0.87        30
 
 📉 Confusion Matrix:
 [[10  0]
