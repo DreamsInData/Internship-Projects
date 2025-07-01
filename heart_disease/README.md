@@ -66,6 +66,10 @@ This project is a **web-based machine learning application** that predicts the l
 | Recall     | 86.7%   |
 | F1-Score   | 87.4%   |
 
+
+### ✅ Heart Disease Prediction Check (30 samples)
+        - Accuracy: 86.67%
+
 ---
 
 ### 🌐 Web Application
@@ -121,8 +125,6 @@ python app.py
 
 ---
 
-### ✅ Heart Disease Prediction Check (30 samples)
-        - Accuracy: 86.67%
 
 ## 📁 Project Structure
 
