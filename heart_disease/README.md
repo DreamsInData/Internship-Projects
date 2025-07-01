@@ -40,9 +40,9 @@ This project is a **web-based machine learning application** that predicts the l
 
 ### 🔍 Machine Learning Model
 
-- **Algorithm**: Random Forest Classifier  
-- **Dataset**: Cleveland Heart Disease Dataset  
-- **Size**: 303 records, 14 features  
+- **Algorithm**: Logistic Regression 
+- **Dataset**: As provided in Project folder(dataset.csv)  
+- **Size**: 1191 records, 12 features  
 - **Key Features**:
   - Age
   - Sex
@@ -55,6 +55,8 @@ This project is a **web-based machine learning application** that predicts the l
   - Exercise-induced angina
   - ST depression
   - ST slope
+
+  - target
 
 #### ✅ Performance Metrics
 | Metric     | Score   |
@@ -91,8 +93,8 @@ This project is a **web-based machine learning application** that predicts the l
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/heart-disease-predictor.git
-cd heart-disease-predictor
+git clone `https://github.com/DreamsInData/Internship-Projects/edit/main/heart_disease/`
+cd heart_disease
 
 # Create a virtual environment
 python -m venv venv
@@ -119,6 +121,9 @@ python app.py
 
 ---
 
+### ✅ Heart Disease Prediction Check (30 samples)
+        - Accuracy: 86.67%
+
 ## 📁 Project Structure
 
 ```
@@ -132,14 +137,12 @@ python app.py
 │   └── index.html              # Main HTML page
 ├── static/
 │   └── style.css               # Custom CSS styles
-└── README.md                   # Project documentation
+
 ```
 
 ---
 
 ## 🔮 Future Improvements
-
-- [ ] Add user authentication
 - [ ] Save & track patient prediction history
 - [ ] Integrate charts or bar graphs (visual results)
 - [ ] Add SHAP explainability for each prediction
@@ -153,5 +156,4 @@ See the [LICENSE](LICENSE) file for full terms.
 
 ---
 
-### ✅ Heart Disease Prediction Check (30 real samples)
-        - Accuracy: 86.67%
+
