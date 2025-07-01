@@ -16,7 +16,7 @@ Animal Classification/
 ├── animal_classifier_model.h5  # Initial trained model
 ├── animal_classifier_model_v2.h5  # Improved accuracy model
 ├── Image Classification of animals.pdf  # Project instructions report
-└── dataset/                    # Animal image dataset (15 classes, 30 images each)
+└── dataset/                    # Animal image dataset (1,944 images across 15 classes)
     ├── Bear/
     ├── Bird/
     ├── Cat/
@@ -103,7 +103,7 @@ python image_classification_using_Webcam.py
   - Better generalization and reduced overfitting
 
 ## Dataset
-- Contains 450 images across 15 animal classes
+- Contains 1,944 images across 15  animal classes
 - 30 images per class
 - Animal classes: Bear, Bird, Cat, Cow, Deer, Dog, Dolphin, Elephant, Giraffe, Horse, Kangaroo, Lion, Panda, Tiger, Zebra
 - Images show animals in various poses and environments
